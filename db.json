@@ -1,16 +1,40 @@
 {
-    "wishlist": [
-        {
-            "id": 1,
-            "title": "제목1",
-            "content": "내용1",
-            "isComplete": false
-        },
-        {
-            "id": 2,
-            "title": "제목2",
-            "content": "내용2",
-            "isComplete": false
-        }
-    ]
+  "wishlist": [
+    {
+      "id": 1,
+      "title": "제목1",
+      "content": "내용1",
+      "isComplete": false
+    },
+    {
+      "id": 2,
+      "title": "제목2",
+      "content": "내용2",
+      "isComplete": false
+    },
+    {
+      "musician": "11",
+      "music": "11",
+      "genre": "11",
+      "dueDate": "11",
+      "isRecord": "11",
+      "id": 3
+    },
+    {
+      "musician": "22",
+      "music": "2",
+      "genre": "2",
+      "dueDate": "2",
+      "isRecord": "2",
+      "id": 4
+    },
+    {
+      "musician": "쇼팽",
+      "music": "발라드 1번",
+      "genre": "클래식",
+      "dueDate": "1년",
+      "isRecord": "아직",
+      "id": 5
+    }
+  ]
 }
