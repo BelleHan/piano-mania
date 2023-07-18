@@ -1,11 +1,17 @@
 <template>
-  <img src="@/assets/icon/grand_piano.png" />
-  <h1>Piano Mania</h1>
+    <div>
+        <h1>
+            <img src="@/assets/icon/grand_piano.png" alt="" />
+            Piano Mania
+        </h1>
+        <div>
+            <router-link to="/wishlist">WishList</router-link>
+        </div>
+    </div>
 </template>
 
-<script>
-export default {}
+<script setup>
+
 </script>
 
-<style>
-</style>
+<style lang="scss" scoped></style>

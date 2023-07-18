@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/Home.vue';
 import Wishlist from '@/views/Wishlist.vue';
+import WishCreate from '@/views/WishCreate.vue';
+
 
 const router = createRouter({
     history: createWebHistory(),
@@ -12,16 +14,15 @@ const router = createRouter({
             component: Home
         },
         {
-            path: '/wishlsit',
+            path: '/wishlist',
             name: 'Wishlist',
             component: Wishlist
         },
         {
-            path: '/todos/:id', // 파라미터를 넣고 싶은 경우 ':변수명' 사용, 
-            //route를 만들때는 _변수명.vue 사용
-            name: 'Todo',
-            component: Todo
-        }
+            path: '/wishCreate',
+            name: 'wishCreate',
+            component: WishCreate
+        },
     ]
 });
 
