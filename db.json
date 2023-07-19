@@ -1,18 +1,6 @@
 {
   "wishlist": [
     {
-      "id": 1,
-      "title": "제목1",
-      "content": "내용1",
-      "isComplete": false
-    },
-    {
-      "id": 2,
-      "title": "제목2",
-      "content": "내용2",
-      "isComplete": false
-    },
-    {
       "musician": "11",
       "music": "11",
       "genre": "11",
@@ -35,6 +23,14 @@
       "dueDate": "1년",
       "isRecord": "아직",
       "id": 5
+    },
+    {
+      "musician": "fds",
+      "music": "sdf",
+      "genre": "sdf",
+      "dueDate": "sdf",
+      "isRecord": "sdf",
+      "id": 6
     }
   ]
 }

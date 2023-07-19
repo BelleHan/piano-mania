@@ -30,7 +30,7 @@ export default {
     })
 
     const createWish = async () => {
-      let res
+
       const data = {
         musician: wish.value.musician,
         music: wish.value.music,
@@ -39,7 +39,8 @@ export default {
         isRecord: wish.value.isRecord
       }
 
-      res = await axios.post('http://localhost:3000/wishlist', data)
+      await axios.post('http://localhost:3000/wishlist', data)
+
     }
 
     return {
@@ -50,4 +51,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
