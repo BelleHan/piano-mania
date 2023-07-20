@@ -31,6 +31,40 @@
       "dueDate": "sdf",
       "isRecord": "sdf",
       "id": 6
+    },
+    {
+      "musician": "df",
+      "music": "df",
+      "genre": "Classic",
+      "dueDate": "fd",
+      "isRecord": "",
+      "id": 7
+    },
+    {
+      "musician": "슈베르트",
+      "music": "악흥의 순간",
+      "genre": "Classic",
+      "dueDate": "2023-08-11",
+      "isRecord": "",
+      "id": 8
+    }
+  ],
+  "genreList": [
+    {
+      "id": 1,
+      "genre": "Classic"
+    },
+    {
+      "id": 2,
+      "genre": "New Age"
+    },
+    {
+      "id": 3,
+      "genre": "Jazz"
+    },
+    {
+      "id": 4,
+      "genre": "Pop Music"
     }
   ]
 }

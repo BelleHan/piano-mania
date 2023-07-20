@@ -6,11 +6,16 @@
     <label>곡명</label>
     <input type="text" v-model="wish.music" /><br />
     <label>장르</label>
-    <input type="text" v-model="wish.genre" /><br />
+    <select v-model="wish.genre">
+      <option v-for="genre in genreList.data" :key="genre.id">{{ genre.genre }}</option>
+    </select><br />
     <label>완주목표기간</label>
-    <input type="text" v-model="wish.dueDate" /><br />
+    <input type="date" v-model="wish.dueDate" /><br />
     <label>녹음여부</label>
-    <input type="text" v-model="wish.isRecord" /><br />
+    <input type="radio" id="notRecordYet" v-model="wish.isRecord" value="false" checked>
+    <label for="notRecordYet">Not record yet</label>
+    <input type="radio" id="recorded" v-model="wish.isRecord" value="true">
+    <label for="recorded">Recorded</label><br />
     <button type="submit">등록</button>
   </form>
 </template>
@@ -27,7 +32,8 @@ export default {
       genre: '',
       dueDate: '',
       isRecord: ''
-    })
+    });
+    const genreList = ref({});
 
     const createWish = async () => {
 
@@ -43,9 +49,18 @@ export default {
 
     }
 
+    const getGenreList = async () => {
+      genreList.value = await axios.get('http://localhost:3000/genreList')
+      console.log(genreList)
+    }
+
+    getGenreList();
+
     return {
       wish,
-      createWish
+      createWish,
+      genreList,
+      getGenreList
     }
   }
 }

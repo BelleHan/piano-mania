@@ -1,12 +1,16 @@
 <template>
-    <h1>Wishlist</h1><br />
-    <div v-for="wish in wishlist.data" :key="wish.id">
-        {{ wish.music }}
-        {{ wish.musician }}
-        {{ wish.genre }}
-        {{ wish.dueDate }}
-        {{ wish.isRecord }}
-    </div>
+    <div>Wish List</div><br />
+    <ul>
+        <li v-for="wish in wishlist.data" :key="wish.id">
+            <router-link to="/wishCreate">
+                {{ wish.music }}
+                {{ wish.musician }}
+                {{ wish.genre }}
+                {{ wish.dueDate }}
+                {{ wish.isRecord }}
+            </router-link>
+        </li>
+    </ul>
     <div class="links">
         <router-link to="/wishCreate">등록</router-link>
         <router-link to="/wishEdit">수정</router-link>
