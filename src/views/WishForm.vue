@@ -23,9 +23,14 @@
 <script>
 import axios from 'axios'
 import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 
 export default {
   setup() {
+    const route = useRoute();
+
+    console.log(route.params.id);
+
     const wish = ref({
       musician: '',
       music: '',
@@ -34,6 +39,15 @@ export default {
       isRecord: ''
     });
     const genreList = ref({});
+
+    const getWish = async () => {
+      await axios.get(`http://localhost:3000/wishlist/${route.params.id}`);
+    }
+
+    if (route.params.id != undefined) {
+      getWish();
+      console.log(getWish());
+    }
 
     const createWish = async () => {
 
@@ -58,6 +72,7 @@ export default {
 
     return {
       wish,
+      getWish,
       createWish,
       genreList,
       getGenreList

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/Home.vue';
 import Wishlist from '@/views/Wishlist.vue';
-import WishCreate from '@/views/WishCreate.vue';
+import WishForm from '@/views/WishForm.vue';
 
 
 const router = createRouter({
@@ -19,10 +19,15 @@ const router = createRouter({
             component: Wishlist
         },
         {
-            path: '/wishCreate',
-            name: 'wishCreate',
-            component: WishCreate
+            path: '/wishForm',
+            name: 'WishCreate',
+            component: WishForm
         },
+        {
+            path: '/wishForm/:id',
+            name: 'WishEdit',
+            component: WishForm
+        }
     ]
 });
 

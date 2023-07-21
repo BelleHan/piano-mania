@@ -3,7 +3,7 @@
         <ul class="horizontal">
             <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/wishlist">Wishlist</router-link></li>
-            <li><router-link to="/wishCreate">Create</router-link></li>
+            <li><router-link to="/wishForm">Create</router-link></li>
         </ul>
     </div>
 </template>

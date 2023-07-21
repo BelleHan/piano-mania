@@ -1,8 +1,8 @@
 <template>
     <div>Wish List</div><br />
     <ul>
-        <li v-for="wish in wishlist.data" :key="wish.id">
-            <router-link to="/wishCreate">
+        <li v-for="wish in  wishlist.data " :key="wish.id">
+            <router-link :to="`/wishForm/${wish.id}`">
                 {{ wish.music }}
                 {{ wish.musician }}
                 {{ wish.genre }}
@@ -12,7 +12,7 @@
         </li>
     </ul>
     <div class="links">
-        <router-link to="/wishCreate">등록</router-link>
+        <router-link to="/wishForm">등록</router-link>
         <router-link to="/wishEdit">수정</router-link>
     </div>
 </template>
