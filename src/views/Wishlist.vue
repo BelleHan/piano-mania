@@ -1,6 +1,6 @@
 <template>
     <div>Wish List</div><br />
-    <ul>
+    <!-- <ul>
         <li v-for="wish in  wishlist.data " :key="wish.id">
             <router-link :to="`/wishForm/${wish.id}`">
                 {{ wish.music }}
@@ -10,11 +10,37 @@
                 {{ wish.isRecord }}
             </router-link>
         </li>
-    </ul>
+    </ul> -->
     <div class="links">
         <router-link to="/wishForm">등록</router-link>
-        <router-link to="/wishEdit">수정</router-link>
     </div>
+
+    <ol class="list-group list-group-numbered">
+        <li class="list-group-item d-flex justify-content-between align-items-start" v-for="wish in  wishlist.data"
+            :key="wish.id">
+            <router-link :to="`/wishForm/${wish.id}`">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{ wish.music }}</div>
+                    {{ wish.musician }}
+                </div>
+                <span class="badge bg-primary rounded-pill">{{ wish.genre }}</span>
+            </router-link>
+        </li>
+        <!-- <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Subheading</div>
+                Content for list item
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Subheading</div>
+                Content for list item
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+        </li> -->
+    </ol>
 </template>
 
 <script>

@@ -1,60 +1,28 @@
 {
   "wishlist": [
     {
-      "musician": "11",
-      "music": "11",
-      "genre": "11",
-      "dueDate": "11",
-      "isRecord": "11",
-      "id": 3
-    },
-    {
-      "musician": "22",
-      "music": "2",
-      "genre": "2",
-      "dueDate": "2",
-      "isRecord": "2",
-      "id": 4
-    },
-    {
       "musician": "쇼팽",
-      "music": "발라드 1번",
-      "genre": "클래식",
-      "dueDate": "1년",
-      "isRecord": "아직",
-      "id": 5
-    },
-    {
-      "musician": "fds",
-      "music": "sdf",
-      "genre": "sdf",
-      "dueDate": "sdf",
-      "isRecord": "sdf",
-      "id": 6
-    },
-    {
-      "musician": "df",
-      "music": "df",
+      "music": "녹턴 Op.9-2",
       "genre": "Classic",
-      "dueDate": "fd",
-      "isRecord": "",
-      "id": 7
+      "dueDate": "2023-10-28",
+      "isRecord": "N",
+      "id": 2
     },
     {
       "musician": "슈베르트",
       "music": "악흥의 순간",
       "genre": "Classic",
-      "dueDate": "2023-08-11",
-      "isRecord": "",
-      "id": 8
+      "dueDate": "2023-08-15",
+      "isRecord": "N",
+      "id": 4
     },
     {
-      "musician": "",
-      "music": "",
-      "genre": "",
-      "dueDate": "",
-      "isRecord": "",
-      "id": 9
+      "musician": "슈만",
+      "music": "트로이메라이(꿈)",
+      "genre": "Classic",
+      "dueDate": "2023-05-09",
+      "isRecord": "Y",
+      "id": 5
     }
   ],
   "genreList": [
