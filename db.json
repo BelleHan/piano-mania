@@ -1,14 +1,6 @@
 {
   "wishlist": [
     {
-      "musician": "쇼팽",
-      "music": "녹턴 Op.9-2",
-      "genre": "Classic",
-      "dueDate": "2023-10-28",
-      "isRecord": "N",
-      "id": 2
-    },
-    {
       "musician": "슈베르트",
       "music": "악흥의 순간",
       "genre": "Classic",
@@ -21,7 +13,7 @@
       "music": "트로이메라이(꿈)",
       "genre": "Classic",
       "dueDate": "2023-05-09",
-      "isRecord": "Y",
+      "isRecord": "N",
       "id": 5
     }
   ],

@@ -1,46 +1,22 @@
 <template>
-    <div>Wish List</div><br />
-    <!-- <ul>
-        <li v-for="wish in  wishlist.data " :key="wish.id">
-            <router-link :to="`/wishForm/${wish.id}`">
-                {{ wish.music }}
-                {{ wish.musician }}
-                {{ wish.genre }}
-                {{ wish.dueDate }}
-                {{ wish.isRecord }}
-            </router-link>
-        </li>
-    </ul> -->
-    <div class="links">
-        <router-link to="/wishForm">등록</router-link>
-    </div>
+    <legend>Wish List</legend>
 
-    <ol class="list-group list-group-numbered">
+    <ol class="list-group list-group-numbered mb-3">
         <li class="list-group-item d-flex justify-content-between align-items-start" v-for="wish in  wishlist.data"
             :key="wish.id">
-            <router-link :to="`/wishForm/${wish.id}`">
-                <div class="ms-2 me-auto">
+            <div class="ms-2 me-auto">
+                <router-link :to="`/wishForm/${wish.id}`">
                     <div class="fw-bold">{{ wish.music }}</div>
                     {{ wish.musician }}
-                </div>
-                <span class="badge bg-primary rounded-pill">{{ wish.genre }}</span>
-            </router-link>
-        </li>
-        <!-- <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold">Subheading</div>
-                Content for list item
+                </router-link>
             </div>
-            <span class="badge bg-primary rounded-pill">14</span>
+            <span class="badge bg-primary rounded-pill">{{ wish.genre }}</span>
         </li>
-        <li class="list-group-item d-flex justify-content-between align-items-start">
-            <div class="ms-2 me-auto">
-                <div class="fw-bold">Subheading</div>
-                Content for list item
-            </div>
-            <span class="badge bg-primary rounded-pill">14</span>
-        </li> -->
     </ol>
+
+    <div class="links">
+        <router-link class="btn btn-primary" to="/wishForm">등록</router-link>
+    </div>
 </template>
 
 <script>
