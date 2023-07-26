@@ -1,9 +1,7 @@
 <template>
     <div class="container col-xxl-8 px-4 py-5">
         <legend>Wish List</legend>
-
         <button type="button" class="btn btn-warning"><router-link to="/wishForm">등록</router-link></button>
-
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="addon-wrapping"><svg width="20" height="20" class="DocSearch-Search-Icon"
                     viewBox="0 0 20 20">
