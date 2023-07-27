@@ -1,7 +1,9 @@
 <template>
     <div class="container col-xxl-8 px-4 py-5">
-        <legend>Wish List</legend>
-        <button type="button" class="btn btn-warning"><router-link to="/wishForm">등록</router-link></button>
+        <div class="top mb-40">
+            <h4>Wish List</h4>
+            <button type="button" class="btn btn-warning"><router-link to="/wishForm">등록</router-link></button>
+        </div>
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="addon-wrapping"><svg width="20" height="20" class="DocSearch-Search-Icon"
                     viewBox="0 0 20 20">
@@ -11,19 +13,18 @@
                         stroke-linejoin="round"></path>
                 </svg></span>
             <input type="text" class="form-control" v-model="searchText" placeholder="Search" aria-label="Search"
-                @keyup.enter="searchWish" aria-describedby="addon-wrapping">
+                @keyup.enter="searchWish" @change="searchWish" aria-describedby="addon-wrapping">
         </div>
         <hr />
         <ol class="list-group list-group-numbered mb-3">
-            <li class="list-group-item d-flex justify-content-between align-items-start" v-for="wish in  wishlist"
-                :key="wish.id">
-                <div class="ms-2 me-auto">
-                    <router-link :to="`/wishForm/${wish.id}`">
+            <li class="list-group-item d-flex align-items-start" v-for="wish in  wishlist" :key="wish.id">
+                <router-link :to="`/wishForm/${wish.id}`">
+                    <div class="ms-2 me-auto">
                         <div class="fw-bold">{{ wish.music }}</div>
                         {{ wish.musician }}
-                    </router-link>
-                </div>
-                <span class="badge bg-primary rounded-pill">{{ wish.genre }}</span>
+                    </div>
+                </router-link>
+                <span class="badge bg-primary rounded-pill ms-auto">{{ wish.genre }}</span>
             </li>
         </ol>
 

@@ -3,12 +3,15 @@
     <legend>Wish Create</legend>
     <form @submit="saveWish">
       <div class="mb-3">
-        <label class="form-label">음악가</label>
-        <input type="text" class="form-control" v-model="wish.musician" />
-      </div>
-      <div class="mb-3">
         <label class="form-label">곡명</label>
         <input type="text" class="form-control" v-model="wish.music" />
+      </div>
+      <div v-if="musicError" class="text-red">
+        곡명을 입력해주세요.
+      </div>
+      <div class="mb-3">
+        <label class="form-label">음악가</label>
+        <input type="text" class="form-control" v-model="wish.musician" />
       </div>
       <div class="mb-3">
         <label class="form-label">장르</label>
@@ -34,12 +37,12 @@
 
       <div class="d-grid gap-2 d-md-block" v-if="editMode">
         <button type="submit" class="btn btn-primary">수정</button>
-        <button type="button" class="btn btn-primary m-1" @click="deleteWish">삭제</button>
-        <button type="button" class="btn btn-primary" @click="goList">취소</button>
+        <button type="button" class="btn btn-secondary m-1" @click="deleteWish">삭제</button>
+        <button type="button" class="btn btn-outline-secondary" @click="goList">취소</button>
       </div>
       <div class="d-grid gap-2 d-md-block" v-else>
         <button type="submit" class="btn btn-primary">등록</button>
-        <button type="button" class="btn btn-primary m-1" @click="goList">취소</button>
+        <button type="button" class="btn btn-outline-secondary m-1" @click="goList">취소</button>
       </div>
     </form>
   </div>
@@ -97,10 +100,11 @@ export default {
 
       if (editMode.value) {
         alert('수정되었습니다.');
-        await axios.put(`http://localhost:3000/wishlist/${route.params.id}`, data);
+        axios.put(`http://localhost:3000/wishlist/${route.params.id}`, data);
+        goList();
       } else {
         alert('등록되었습니다.');
-        await axios.post('http://localhost:3000/wishlist', data);
+        axios.post('http://localhost:3000/wishlist', data);
       }
 
     }
