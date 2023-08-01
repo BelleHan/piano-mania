@@ -1,14 +1,14 @@
 <template>
   <div class="container col-xxl-8 px-4 py-5">
-    <legend>Wish Create</legend>
-    <form @submit="saveWish">
+    <h4>Wish Create</h4>
+    <form @submit.prevent="saveWish">
       <div class="mb-3">
         <label class="form-label">곡명</label>
         <input type="text" class="form-control" v-model="wish.music" />
       </div>
-      <div v-if="musicError" class="text-red">
+      <!-- <div v-if="musicError" class="text-red">
         곡명을 입력해주세요.
-      </div>
+      </div> -->
       <div class="mb-3">
         <label class="form-label">음악가</label>
         <input type="text" class="form-control" v-model="wish.musician" />
@@ -105,6 +105,7 @@ export default {
       } else {
         alert('등록되었습니다.');
         axios.post('http://localhost:3000/wishlist', data);
+        goList();
       }
 
     }

@@ -10,4 +10,10 @@ import Footer from '@/components/Footer.vue';
   <Footer />
 </template>
 
-<style scoped></style>
+<style>
+h4 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+</style>

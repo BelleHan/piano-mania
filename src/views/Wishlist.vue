@@ -1,8 +1,8 @@
 <template>
     <div class="container col-xxl-8 px-4 py-5">
-        <div class="top mb-40">
+        <div class="top">
             <h4>Wish List</h4>
-            <button type="button" class="btn btn-warning"><router-link to="/wishForm">등록</router-link></button>
+            <router-link to="/wishForm" class="btn btn-warning btn-create">등록</router-link>
         </div>
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="addon-wrapping"><svg width="20" height="20" class="DocSearch-Search-Icon"
@@ -98,5 +98,13 @@ export default {
     font-size: 20px;
     text-align: center;
     line-height: 2;
+}
+</style>
+
+<style scoped>
+.btn-create {
+    height: 40px;
+    width: 100px;
+    margin-top: 30px;
 }
 </style>

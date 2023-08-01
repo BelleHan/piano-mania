@@ -9,17 +9,40 @@
                     <li><router-link to="/wishForm" class="nav-link px-2 text-white">Create</router-link></li>
                 </ul>
 
-                <div class="text-end">
-                    <button type="button" class="btn btn-outline-light me-2">Login</button>
-                    <button type="button" class="btn btn-warning">Sign-up</button>
+                <div class="text-end" v-if="!userStore.isLoggedIn">
+                    <router-link to="/login" class="btn btn-outline-light me-2">Login</router-link>
+                    <router-link to="/join" class="btn btn-warning">Sign-up</router-link>
+                </div>
+                <div class="text-end" v-else>
+                    <button type="button" class="btn btn-outline-light me-2" @click="logOut">Logout</button>
                 </div>
             </div>
         </div>
     </header>
 </template>
 
-<script setup>
+<script>
+import { useUserStore } from '@/stores/user-store';
+import { useRouter } from 'vue-router';
 
+export default {
+    setup() {
+
+        const userStore = useUserStore();
+        const router = useRouter();
+
+        const logOut = async () => {
+            userStore.userName = null;
+            alert("로그아웃 되었습니다.");
+            router.push('/login');
+        };
+
+        return {
+            userStore,
+            logOut
+        }
+    }
+}
 </script>
 
 <style scoped>

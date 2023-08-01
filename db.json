@@ -17,33 +17,33 @@
       "id": 5
     },
     {
-      "musician": "123",
-      "music": "123",
+      "musician": "히사이시조",
+      "music": "Summer",
       "genre": "New Age",
       "dueDate": "2023-07-11",
-      "isRecord": "N",
+      "isRecord": "Y",
       "id": 6
     },
     {
-      "musician": "qwe",
-      "music": "qwe",
-      "genre": "Jazz",
+      "musician": "이루마",
+      "music": "river flow in you",
+      "genre": "New Age",
       "dueDate": "2023-07-29",
-      "isRecord": "N",
+      "isRecord": "Y",
       "id": 7
     },
     {
-      "musician": "asd",
-      "music": "asd",
+      "musician": "Brian Crain",
+      "music": "Butterfly Waltz",
       "genre": "New Age",
       "dueDate": "2023-07-21",
       "isRecord": "Y",
       "id": 8
     },
     {
-      "musician": "asd",
-      "music": "asd",
-      "genre": "New Age",
+      "musician": "Chopin",
+      "music": "Nocturne Op.9-2",
+      "genre": "Classic",
       "dueDate": "2023-07-29",
       "isRecord": "N",
       "id": 9
@@ -65,6 +65,64 @@
     {
       "id": 4,
       "genre": "Pop Music"
+    }
+  ],
+  "member": [
+    {
+      "firstName": "Heesu",
+      "lastName": "Han",
+      "userName": "Belle",
+      "email": "heesu1028@naver.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "firstName": "J",
+      "lastName": "Yoon",
+      "userName": "JY",
+      "email": "yoonJ@naver.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "firstName": "Inju",
+      "lastName": "Cho",
+      "userName": "발랑이",
+      "email": "impearl22@naver.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "firstName": "Jinwook",
+      "lastName": "Yoon",
+      "userName": "JY",
+      "email": "jinwook@naver.com",
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "firstName": "Heesu",
+      "lastName": "Han",
+      "userName": "Belle",
+      "email": "heesu10258@gmail.com",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "firstName": "Heesu",
+      "lastName": "Han",
+      "userName": "Belle",
+      "email": "heesu123@naver.com",
+      "password": "1234",
+      "id": 6
+    },
+    {
+      "firstName": "Heesu",
+      "lastName": "Han",
+      "userName": "Belle",
+      "email": "heesu1111@naver.com",
+      "password": "1234",
+      "id": 7
     }
   ]
 }
